@@ -4,17 +4,6 @@ A full-stack web application that converts long URLs into short, shareable links
 
 Built as a university mini project using **React**, **Node.js**, **Express**, and **MySQL (XAMPP)**.
 
----
-
-## Screenshots
-
-### Home Page & Shortening
-![Home Page](screenshots/home.png)
-
-### History with Click Tracking
-![History](screenshots/history.png)
-
----
 
 ## Features
 
