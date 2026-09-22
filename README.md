@@ -1,11 +1,12 @@
-URL Shortener
+# URL Shortener
 
-A full-stack web application that converts long URLs into short, shareable links with real-time click tracking and history.
+A full-stack web application that converts long URLs into short, shareable links with click tracking and history.
 
-Built as a mini project using **React**, **Node.js**, **Express**, and **MySQL (XAMPP)**.
+Built as a university mini project using **React**, **Node.js**, **Express**, and **MySQL (XAMPP)**.
 
 ---
-Screenshots
+
+## Screenshots
 
 ### Home Page & Shortening
 ![Home Page](screenshots/home.png)
@@ -14,17 +15,19 @@ Screenshots
 ![History](screenshots/history.png)
 
 ---
-Features
 
-- 🔗 Shorten any long URL into a 6-character code
-- 📋 One-click copy to clipboard
-- 📊 Click tracking — every visit increments the counter
-- 📜 History table showing all shortened URLs
-- 🔁 Auto-redirect from short URL to original
-- ✅ Auto-adds `https://` if missing
+## Features
+
+- Shorten any long URL into a 6-character code
+- One-click copy to clipboard
+- Click tracking — every visit increments the counter
+- History table showing all shortened URLs
+- Auto-redirect from short URL to original
+- Auto-adds `https://` if the user forgets it
 
 ---
-Tech Stack
+
+## Tech Stack
 
 | Layer     | Technology                     |
 |-----------|--------------------------------|
@@ -34,7 +37,8 @@ Tech Stack
 | Libraries | `nanoid`, `mysql2`, `cors`     |
 
 ---
-Project Structure
+
+## Project Structure
 
 ```
 url-shortener/
@@ -51,12 +55,14 @@ url-shortener/
 ├── screenshots/
 │   ├── home.png
 │   └── history.png
-├── database.sql         # SQL to create database & table
 └── README.md
 ```
 
 ---
- Database Schema
+
+## Database Setup
+
+Open **phpMyAdmin** (`http://localhost/phpmyadmin`) and run this SQL once:
 
 ```sql
 CREATE DATABASE url_shortener;
@@ -73,13 +79,14 @@ CREATE TABLE urls (
 ```
 
 ---
-API Endpoints
 
-| Method | Endpoint         | Description                          |
-|--------|------------------|--------------------------------------|
-| POST   | `/shorten`       | Create a short URL from a long URL   |
-| GET    | `/urls`          | Get all shortened URLs (history)     |
-| GET    | `/:code`         | Redirect to the original URL         |
+## API Endpoints
+
+| Method | Endpoint    | Description                          |
+|--------|-------------|--------------------------------------|
+| POST   | `/shorten`  | Create a short URL from a long URL   |
+| GET    | `/urls`     | Get all shortened URLs (history)     |
+| GET    | `/:code`    | Redirect to the original URL         |
 
 **Example — POST `/shorten`:**
 
@@ -98,18 +105,18 @@ Response:
 ```
 
 ---
-How to Run Locally
+
+## How to Run Locally
 
 ### Prerequisites
 - Node.js installed
 - XAMPP installed (Apache + MySQL)
-- Git (optional)
 
 ### Step 1 — Start XAMPP
-Open XAMPP Control Panel → Start **Apache** and **MySQL**.
+Open XAMPP Control Panel -> Start **Apache** and **MySQL**.
 
 ### Step 2 — Set up the database
-Open phpMyAdmin (`http://localhost/phpmyadmin`) → SQL tab → paste contents of `database.sql` → **Go**.
+Open phpMyAdmin and run the SQL shown in the **Database Setup** section above.
 
 ### Step 3 — Run the backend
 ```bash
@@ -133,7 +140,7 @@ Open `http://localhost:5173`, paste a URL, click **Shorten**.
 
 ---
 
-How It Works
+## How It Works
 
 1. User pastes a long URL into the React form.
 2. Frontend sends `POST /shorten` to the backend.
@@ -146,23 +153,25 @@ How It Works
    - Redirects to the original URL
 
 ---
-Future Scope
 
-- 🔲 User authentication (login/signup with JWT)
-- 🔲 QR code generation for each short link
-- 🔲 Custom short codes (user chooses the code)
-- 🔲 Expiry dates for links
-- 🔲 Analytics dashboard with charts
-- 🔲 Delete / edit links
-- 🔲 Cloud deployment (Vercel + Render + Railway)
+## Future Scope
 
----
-Author
-
-**[Your Name]**
-University Mini Project — [Year]
+- User authentication (login/signup with JWT)
+- QR code generation for each short link
+- Custom short codes chosen by the user
+- Expiry dates for links
+- Analytics dashboard with charts
+- Delete / edit links
+- Cloud deployment (Vercel + Render + Railway)
 
 ---
-License
+
+## Author
+Ayushi Chopra
+Mini Project — [2026]
+
+---
+
+## License
 
 This project is open-source and available under the [MIT License](LICENSE).
